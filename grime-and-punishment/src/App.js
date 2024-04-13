@@ -4,7 +4,7 @@ import { RouterProvider, Route } from "react-router-dom";
 const App = () => {
   return (
     <>
-      <SessionProvider>
+      {/* <SessionProvider>
         <RouterProvider router={router}>
           <Route>
             {({ children }) => (
@@ -21,7 +21,7 @@ const App = () => {
             )}
           </Route>
         </RouterProvider>
-      </SessionProvider>
+      </SessionProvider> */}
     </>
   );
 };
