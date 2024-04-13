@@ -4,12 +4,15 @@
   "description": "business website",
   "main": "App.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "vite"
   },
   "repository": {
     "type": "git",
     "url": "//github.com/alliebourden/grime-and-punishment.git"
   },
   "author": "Allie Bourden",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "vite": "^5.2.8"
+  }
 }
