@@ -1,0 +1,15 @@
+{
+  "name": "grime-and-punishment",
+  "version": "1.0.0",
+  "description": "business website",
+  "main": "App.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "//github.com/alliebourden/grime-and-punishment.git"
+  },
+  "author": "Allie Bourden",
+  "license": "ISC"
+}
