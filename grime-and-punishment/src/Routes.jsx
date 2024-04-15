@@ -5,10 +5,9 @@ const router = createBrowserRouter(
   [
     {
       path: "/",
-      element: <Landing/>,
+      element: <Landing />,
     },
   ],
-//   { basename: import.meta.env.DEV ? "/" : "/grime-and-punishment/" }
 );
 
 export default router;
