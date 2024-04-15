@@ -3,7 +3,8 @@ import React from "react";
 export default function Landing() {
     return (
         <div>
-            <hi>HELLO</hi>
+            <h1 className="text-3xl font-bold underline">
+                Hello world!</h1>
         </div>
     );
 }
