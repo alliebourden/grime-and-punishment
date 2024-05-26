@@ -4,7 +4,6 @@ import {
   Flex,
   Text,
   IconButton,
-  Button,
   Stack,
   Collapse,
   Icon,
@@ -23,11 +22,21 @@ import {
   ChevronRightIcon,
 } from '@chakra-ui/icons';
 
+import GrimeandPunishmentLogo from '../assets/GrimeandPunishmentLogo.png';
+
 const NavBar = () => {
   const { isOpen, onToggle } = useDisclosure();
 
   return (
     <Box>
+      <Flex justifyContent="center" mt={4}>
+        <Image
+          src={GrimeandPunishmentLogo}
+          alt="Logo"
+          w={{ base: '150px', md: '250px' }}
+        />
+      </Flex>
+
       <Flex
         bg={useColorModeValue('white', 'gray.800')}
         color={useColorModeValue('gray.600', 'white')}
@@ -39,42 +48,21 @@ const NavBar = () => {
         borderColor={useColorModeValue('gray.200', 'gray.900')}
         align="center"
         justify="space-between"
+        mt={4}
       >
-        <Flex align="center">
-          <Image
-            src="/src/assets/HarvestHaul_Logo.png"
-            alt="Logo"
-            boxSize="50px"
-          />
-          <Flex display={{ base: 'none', md: 'flex' }} ml={10}>
+        <Flex align="center" flex={1} justify="center">
+          <Flex display={{ base: 'none', md: 'flex' }}>
             <DesktopNav />
           </Flex>
         </Flex>
 
-        <Stack direction="row" spacing={6} alignItems="center">
-          <Button as="a" fontSize="sm" fontWeight={400} variant="link" href="#">
-            Sign In
-          </Button>
-          <Button
-            as="a"
-            display={{ base: 'none', md: 'inline-flex' }}
-            fontSize="sm"
-            fontWeight={600}
-            color="white"
-            bg="green.400"
-            href="#"
-            _hover={{ bg: 'green.300' }}
-          >
-            Sign Up
-          </Button>
-          <IconButton
-            onClick={onToggle}
-            icon={isOpen ? <CloseIcon w={3} h={3} /> : <HamburgerIcon w={5} h={5} />}
-            variant="ghost"
-            aria-label="Toggle Navigation"
-            display={{ base: 'flex', md: 'none' }}
-          />
-        </Stack>
+        <IconButton
+          onClick={onToggle}
+          icon={isOpen ? <CloseIcon w={3} h={3} /> : <HamburgerIcon w={5} h={5} />}
+          variant="ghost"
+          aria-label="Toggle Navigation"
+          display={{ base: 'flex', md: 'none' }}
+        />
       </Flex>
 
       <Collapse in={isOpen} animateOpacity>
@@ -86,7 +74,7 @@ const NavBar = () => {
 
 const DesktopNav = () => {
   const linkColor = useColorModeValue('gray.600', 'gray.200');
-  const linkHoverColor = useColorModeValue('gray.800', 'white');
+  const linkHoverColor = useColorModeValue('pink.400', 'pink');
   const popoverContentBgColor = useColorModeValue('white', 'gray.800');
 
   return (
@@ -98,7 +86,7 @@ const DesktopNav = () => {
               <Link
                 p={2}
                 href={navItem.href ?? '#'}
-                fontSize="sm"
+                fontSize="md"
                 fontWeight={500}
                 color={linkColor}
                 _hover={{ textDecoration: 'none', color: linkHoverColor }}
