@@ -12,10 +12,13 @@ import {
   useColorModeValue,
 } from '@chakra-ui/react';
 import {
-  IoAnalyticsSharp,
-  IoLogoBitcoin,
+  IoCheckmarkCircleOutline,
+  IoHappyOutline,
   IoSearchSharp,
+
 } from 'react-icons/io5';
+
+import HeroImage from '../assets/HeroHomeImage.jpg';
 
 const Feature = ({ text, icon, iconBg }) => {
   return (
@@ -43,8 +46,7 @@ const SplitWithImage = () => {
 
           <Heading>Transforming Spaces, One Clean at a Time</Heading>
           <Text color={'gray.500'} fontSize={'lg'}>
-            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
-            nonumy eirmod tempor invidunt ut labore
+          With meticulous attention to detail and a commitment to quality, we transform even the toughest messes into spotless sanctuaries. Say goodbye to the hassle of cleaning and hello to the joy of sparkling surroundings. Let <strong>Grime + Punishment Services</strong> handle the dirty work, so you can enjoy a pristine environment without the punishment of scrubbing.
           </Text>
           <Stack
             spacing={4}
@@ -55,19 +57,19 @@ const SplitWithImage = () => {
             }
           >
             <Feature
-              icon={<Icon as={IoAnalyticsSharp} color={'yellow.500'} w={5} h={5} />}
-              iconBg={useColorModeValue('yellow.100', 'yellow.900')}
-              text={'Business Planning'}
+              icon={<Icon as={IoCheckmarkCircleOutline} color={'yellow.500'} w={5} h={5} />}
+              iconBg={useColorModeValue('yellow.100', 'black')}
+              text={'Expertise in Tough Cleaning'}
             />
             <Feature
-              icon={<Icon as={IoLogoBitcoin} color={'green.500'} w={5} h={5} />}
+              icon={<Icon as={IoSearchSharp} color={'green.500'} w={5} h={5} />}
               iconBg={useColorModeValue('green.100', 'green.900')}
-              text={'Financial Planning'}
+              text={'Attention to Detail'}
             />
             <Feature
-              icon={<Icon as={IoSearchSharp} color={'purple.500'} w={5} h={5} />}
-              iconBg={useColorModeValue('purple.100', 'purple.900')}
-              text={'Market Analysis'}
+              icon={<Icon as={IoHappyOutline} color={'pink.500'} w={5} h={5} />}
+              iconBg={useColorModeValue('pink.200')}
+              text={'Convenience and Peace of Mind'}
             />
           </Stack>
         </Stack>
@@ -75,9 +77,7 @@ const SplitWithImage = () => {
           <Image
             rounded={'md'}
             alt={'feature image'}
-            src={
-              'https://images.unsplash.com/photo-1554200876-56c2f25224fa?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80'
-            }
+            src= {HeroImage}
             objectFit={'cover'}
           />
         </Flex>
